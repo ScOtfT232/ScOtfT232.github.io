@@ -1,0 +1,90 @@
+<html lang="HU">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="Cim">
+            <img src="Python_logo.png" id="Logo">
+        </div>
+        <div id="oldalNav" class="sidenav">
+            <a href="" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">Pycharm-Python telepítés</a>
+            <a href="printstb.html">print()</a>
+            <a href="#">Adattípusok</a>
+            <a href="#">input()</a>
+            <a href="feladatok.html">Feladatok</a>
+        </div>
+        <div id="menu">
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">☰ Menü</span>
+        </div>
+        <div class="kozep">
+            <h1>Feladatok</h1>
+            <br>
+            <h2>4.</h2>
+            <div class="feladat">
+                Írd ki hogy a 2 szám közül hány db páros szám van
+            </div>
+            <div class="program" id="1">
+                paros_db = 0<br>
+                if szam1 % 2 == 0:      # a szám maradékát nézzük meg hogy egyenlő e 0-val hogyha elosszuk 2-vel<br>
+                &emsp;paros_db = paros_db + 1<br>
+                if szam2 % 2 == 0:<br>
+                &emsp;paros_db = paros_db + 1<br>
+                print("Ennyi páros számot írtál be:", paros_db)<br>
+            </div>
+            <div class="buttonDiv">
+                <button onclick="feladatMutat(1)">Feladat megoldás mutatása</button>
+            </div>
+            <br>
+            <br>
+            <h2>5.</h2>
+            <div class="feladat">
+                Kérj be maximum 10 állatot. Ha valaki hamarabb akarja befejeznie beírást, akkor írjon „x” betűt
+            </div>
+            <div class="program" id="2">
+                allat = []<br>
+                i = 0<br>
+                while i < 10:<br>
+                &emsp;allat1 = input("Egy állat:")<br>
+                &emsp;if allat1 == "x":<br>
+                &emsp;&emsp;break<br>
+                &emsp;allat.append(allat1)<br>
+                &emsp;i += 1<br>
+            </div>
+            <div class="buttonDiv">
+                <button onclick="feladatMutat(2)">Feladat megoldás mutatása</button>
+            </div>
+            <br>
+            <a href="feladatok.html" class="button_text" style="margin-right: 80%;">Előző oldal</a>
+        </div>
+        <script>
+            feladatRejt();
+            var oldalNav = document.getElementById("oldalNav");
+
+            function openNav() {
+                oldalNav.style.width = "15%";
+            }
+            function closeNav() {
+                oldalNav.style.width = "0";
+            }
+            function feladatMutat(x) {
+                var div = document.getElementById(x);
+
+                if (div.style.display === "none"){
+                    div.style.display = "block";
+                }
+                else {
+                    div.style.display = "none";
+                }
+            }
+            function feladatRejt() {
+                for (let i = 0; i < 2; i++) {
+                    var div = document.getElementById(i + 1);
+
+                    div.style.display = "none";
+                }
+            }
+        </script>
+    </body>
+</html>

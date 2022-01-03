@@ -1,0 +1,107 @@
+<html lang="HU">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="Cim">
+            <img src="Python_logo.png" id="Logo">
+        </div>
+        <div id="oldalNav" class="sidenav">
+            <a href="" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">Pycharm-Python telepítés</a>
+            <a href="printstb.html">print()</a>
+            <a href="#">Adattípusok</a>
+            <a href="#">input()</a>
+            <a href="feladatok.html">Feladatok</a>
+        </div>
+        <div id="menu">
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">☰ Menü</span>
+        </div>
+        <div class="kozep">
+            <h1>Feladatok</h1>
+            <br>
+            <h2>1.</h2>
+            <div class="feladat">
+                Hozz létre egy listát szamok néven, melyben 20db, -25 … 100 közötti egész szám van.
+            </div>
+            <div class="program" id="1">
+                import random<br>
+                <br>
+                szamok = []     #létrehoztam az üres listát<br>
+                i = 0       # csináltam egy változót<br>
+                while i < 20:<br>
+                &emsp; szam = random.randint(-25, 100)     #random számokat generáltam<br>
+                &emsp; szamok.append(szam)     #beírtam a számokat a listába<br>
+                &emsp; i += 1      #lezártam a ciklust<br>
+            </div>
+            <div class="buttonDiv">
+                <button onclick="feladatMutat(1)">Feladat megoldás mutatása</button>
+            </div>
+            <br>
+            <h2>2.</h2>
+            <div class="feladat">
+                Írasd ki a lista elemeit egy sorba pontosvesszővel elválasztva
+            </div>
+            <div class="program" id="2">
+                szamok_str = []     #egy lista amibe str-ként kezeli a számokat<br>
+                i = 0<br>
+                while i < 20:<br>
+                &emsp;szamok_str.append(str(szamok[i]))       #feltölti az eredeti számokat, msotmár str-ként az új listába<br>
+                &emsp;i += 1<br>
+                print(';'.join(szamok_str))<br>
+            </div>
+            <div class="buttonDiv">
+                <button onclick="feladatMutat(2)">Feladat megoldás mutatása</button>
+            </div>
+            <br>
+            <h2>3.</h2>
+            <div class="feladat">
+                Kérj be 2 számot, írd ki melyik a nagyobb és mennyivel
+            </div>
+            <div class="program" id="3">
+                szam1 = int(input("Kérek egy számot:"))     #bekértem a számokat<br>
+                szam2 = int(input("Kérek egy másik számot:"))<br>
+                if szam1 < szam2:       # ha a szam1 kissebb mint a szam2 akkor ez a parancs teljesül<br>
+                &emsp;print("A kissebb szám:", szam1)<br>
+                &emsp;print("A két szám különbsége:", szam2 - szam1)<br>
+                else:           #hogyha nagyobb akkor pedig ez<br>
+                &emsp;print("A kissebbb szám:", szam2)<br>
+                &emsp;print("A két szám különbsége:", szam1-szam2)<br>
+            </div>
+            <div class="buttonDiv">
+                <button onclick="feladatMutat(3)">Feladat megoldás mutatása</button>
+            </div>
+            <br>
+            <a href="feladatok_2.html" class="button_text" style="margin-left: 80%;">Köveztkező oldal</a>
+        </div>
+        <script>
+            feladatRejt();
+            var oldalNav = document.getElementById("oldalNav");
+
+            function openNav() {
+                oldalNav.style.width = "15%";
+            }
+            function closeNav() {
+                oldalNav.style.width = "0";
+            }
+            function feladatMutat(x) {
+                var div = document.getElementById(x);
+
+                if (div.style.display === "none"){
+                    div.style.display = "block";
+                }
+                else {
+                    div.style.display = "none";
+                }
+            }
+            function feladatRejt() {
+                for (let i = 0; i < 3; i++) {
+                    var div = document.getElementById(i + 1);
+
+                    div.style.display = "none";
+                }
+            }
+        </script>
+    </body>
+</html>
