@@ -21,15 +21,20 @@
         <div class="kozep">
             <h2 class="h2_center"><span style="color: purple;">print</span>()<br></h2>
             <div>
-              <div class="program">
-                <span style="color: purple;">print</span>("Hello World")<br>
-              </div>
-              <div class="koz"></div>
-              <div class="kimenet">
-                  Kimenet:<br>
-                  <br>
-                  Hello World
-              </div>
+                <div class="program">
+                    <span style="color: purple;">print</span>("Hello World")<br>
+                </div>
+                <div class="koz"></div>
+                <div class="kimenet">
+                    Kimenet:<br>
+                    <br>
+                    Hello World
+                </div>
+                <iframe id="1" width="420" height="315" src="https://www.youtube.com/embed/nXbE5dehnbU"></iframe>
+                <br>
+                <div class="buttonDiv">
+                    <button onclick="videoMutat(1)">Videó mutatása</button>
+                </div>
             </div>
             <hr class="kerek">
             <h2 class="h2_center">Adattípusok</h2>
@@ -71,11 +76,29 @@
         <script>
             var oldalNav = document.getElementById("oldalNav");
 
+            videoRejt();
             function openNav() {
                 oldalNav.style.width = "15%";
             }
             function closeNav() {
                 oldalNav.style.width = "0";
+            }
+            function videoMutat(x) {
+                var vid = document.getElementById(x);
+
+                if (vid.style.display === "none"){
+                    vid.style.display = "block";
+                }
+                else{
+                    vid.style.display = "none";
+                }
+            }
+            function videoRejt() {
+                for (let i = 0; i < 1; i++){
+                    var vid = document.getElementById(i + 1);
+
+                    vid.style.display = "none";
+                }
             }
         </script>
     </body>
