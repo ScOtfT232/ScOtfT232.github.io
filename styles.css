@@ -1,0 +1,129 @@
+body{
+    background: rgb(8,146,236);
+    background: linear-gradient(to bottom right, rgba(8,146,236,1) 0%, rgba(2,116,190,1) 50%, rgba(255,255,0) 50.00000000000000000001%, rgba(255,255,0) 100%);
+}
+.sidenav{
+    height: 50%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+    /*transition: 0.5s;*/
+}
+.sidenav a{
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    /*transition: 0.3s;*/
+}
+  
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+  
+.sidenav .closebtn{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+  
+#menu{
+    /*transition: margin-left .5s;*/
+    padding: 20px;
+}
+
+img{
+    width: 20%;
+    height: 20%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#Cim{
+    text-align: center;
+}
+.kozep{
+    width: 70%;
+    margin: auto;
+    background: grey;
+    color: white;
+    height: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h3{
+    padding-left: 3%;
+}
+.program{
+    background-color: black;
+    width: 70%;
+    margin: auto;
+    padding-top: .2%;
+    padding-bottom: .2%;
+}
+.leiras{
+    background: darkgray;
+    color: white;
+    width: 70%;
+    margin: auto;
+    font-size: 20;
+}
+.koz{
+    height: 2%;
+}
+.kimenet{
+    background-color: white;
+    color: black;
+    width: 70%;
+    margin: auto;
+}
+#logo{
+    width: 420px;
+    height: 110px;
+}
+h1{
+    text-align: center;
+}
+.button_text{
+    background-color: rgb(2,116,190,1);
+    text-decoration: none;
+    padding-left: 1%;
+    padding-right: 1%;
+    color: white;
+}
+.button_text:visited{
+    color: white;
+}
+.button_text_big{
+    background-color: rgb(2,116,190,1);
+    text-decoration: none;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 3%;
+    padding-right: 3%;
+    color: white;
+    margin: auto;
+}
+.button_text_big:visited{
+    color: white;
+}
+.right_button{
+    margin: auto;
+}
+p{
+    font-size: 17;
+}
+.h2_center{
+    text-align: center;
+}
+hr.kerek{
+    border-top: 8px solid black;
+    border-radius: 5px;
+}

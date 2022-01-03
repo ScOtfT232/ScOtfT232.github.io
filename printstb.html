@@ -1,0 +1,82 @@
+<html lang="HU">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="Cim">
+            <img src="Python_logo.png" id="Logo">
+        </div>
+        <div id="oldalNav" class="sidenav">
+            <a href="" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="main.html">Pycharm-Python telepítés</a>
+            <a href="printstb.html">print()</a>
+            <a href="#">Adattípusok</a>
+            <a href="#">input()</a>
+            <a href="#"></a>
+        </div>
+        <div id="menu">
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">☰ Menü</span>
+        </div>
+        <div class="kozep">
+            <h2 class="h2_center"><span style="color: purple;">print</span>()<br></h2>
+            <div>
+              <div class="program">
+                <span style="color: purple;">print</span>("Hello World")<br>
+              </div>
+              <div class="koz"></div>
+              <div class="kimenet">
+                  Kimenet:<br>
+                  <br>
+                  Hello World
+              </div>
+            </div>
+            <hr class="kerek">
+            <h2 class="h2_center">Adattípusok</h2>
+            <div class="leiras">
+                Bármilyen változók vagy bemenetet létrehozunk annak lesz egy adattípusa és az adattípusoknak a következők a nevei.
+                <ul>
+                    <li>Szöveg: <span style="color: purple">str</span></li>
+                    <li>Számok: <span style="color: purple;">int, float, complex</span></li>
+                    <li>Boolean(Igaz/Hamis): <span style="color: purple;">bool</span></li>
+                    <li>Sorrendek: <span style="color: purple;">list, tuple, range</span></li>
+                </ul>
+            </div>
+            <hr class="kerek">
+            <h2 class="h2_center">Változók</h2>
+            <div class="leiras">
+                A változókat külömböző adatok tárolására használjuk amiket majd változtatni tudunk.<br>
+                Ebben a példában az "x" változóhoz rendelünk hozzá 10-et:<br>
+            </div>
+            <div class="program">
+                x = 10
+            </div>
+            <div class="leiras">
+                Ezzel a változóval szinte bármilyen műveletet elvégezhetünk és ki is írhatjuk a print() funkció segítségével.
+            </div>
+            <div class="program">
+                x = 10 / 5
+                <span style="color: purple;">print</span>(x)
+            </div>
+            <div class="kimenet">
+                Kimenet:<br>
+                <br>
+                2
+            </div>
+            <hr class="kerek">
+            <div class="right_button">
+                <a class="button_text_big" href="">fdgvf</a>
+            </div>
+        </div>
+        <script>
+            var oldalNav = document.getElementById("oldalNav");
+
+            function openNav() {
+                oldalNav.style.width = "15%";
+            }
+            function closeNav() {
+                oldalNav.style.width = "0";
+            }
+        </script>
+    </body>
+</html>
